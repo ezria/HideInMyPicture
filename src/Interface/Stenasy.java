@@ -271,14 +271,11 @@ public class Stenasy {
 		public void actionPerformed(ActionEvent e) {
 			enabledAllButton(false);
 			editorPaneTexte.setText("");
-			if(rdbtnNiveauDeGris.isSelected()){
-				System.out.println( SteganoTraitement.readOnHeightBitColorsPicture(image, editorPaneCle.getText()));
-				textPanInfo.setText("Votre message est: \n\r" + SteganoTraitement.readOnHeightBitColorsPicture(image, editorPaneCle.getText()) +"");
-			}
-			else if(rdbtnCouleur.isSelected()){
-				System.out.println( SteganoTraitement.readOnTwentyFourBitColorsPicture(image, editorPaneCle.getText()));
-				textPanInfo.setText("Votre message est:" + SteganoTraitement.readOnTwentyFourBitColorsPicture(image, editorPaneCle.getText()) +"");		
-			}
+			if(rdbtnNiveauDeGris.isSelected())
+				textPanInfo.setText("Votre message est: \n\r" + SteganoTraitement.readOnHeightBitColorsPicture(image, editorPaneCle.getText()));
+
+			else if(rdbtnCouleur.isSelected())
+			
 			enabledAllButton(true);
 		}
 	}
